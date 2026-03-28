@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+
+.grid-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: #2c3e50;
+  display: flex;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ecf0f1;
+  position: relative;
+}
+
+.trait::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #ecf0f1;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.trait:hover::before {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  list-style: none;
+}
+
+nav .fa-bars {
+  display: none;
+}
+
+.main {
+  grid-area: main;
+  background-color: #ecf0f1;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2em;
+  padding-bottom: 2em;
+}
+
+.hero-image {
+  width: 100%;
+  height: 30em;
+  background-image: url("./Image/Hero-section/Equipe-Cheffe-4k.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-line {
+  height: 5px;
+  width: 50%;
+  background-color: #d35400;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 80%;
+  text-align: center;
+}
+/* ===============================
+            SERVICE
+===============================             */
+
+.section-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  padding: 2em 0;
+}
+
+.menu-container {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.item1,
+.item2,
+.item3 {
+  flex: 1 1 0;
+}
+
+.carte-container {
+  cursor: pointer;
+  width: 60%;
+  height: 25em;
+  perspective: 800px;
+}
+
+.carte {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.carte-container:hover .carte {
+  transform: rotateY(180deg);
+}
+
+.face,
+.dos {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.face {
+  background: #d35400;
+  color: white;
+  font-size: 5em;
+}
+.dos {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #d35400;
+  padding: 1em;
+  gap: 1em;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.illustration-e1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Entres/Ceviche.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Entres/Mezze.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e3 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Entres/Tartare.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e4 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Plat_de_resistance/Curry.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e5 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Plat_de_resistance/Steak-Frite.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e6 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Plat_de_resistance/Sushi-Sashimi.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e7 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Desserts/Tiramissu.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e8 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Desserts/Chessecake.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e9 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Desserts/Creme-brulee.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e10 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Boissons/Caffe.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e11 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Boissons/Spritz.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration-e12 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./Image/Boissons/The-Glace.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ===============================
+            A PROPOS
+===============================             */
+
+.section-apropos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  gap: 3em;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 60%;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 2em;
+}
+
+.apropos-line {
+  height: 2px;
+  background-color: #d35400;
+  width: 100%;
+}
+
+.apropos-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.apropos-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 17rem;
+  width: 14rem;
+  padding: 1rem 5px;
+  background-color: #2c3e50;
+  border-radius: 12px;
+  color: #ecf0f1;
+}
+
+.apropos-card span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf0f1;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.apropos-card p {
+  text-align: center;
+}
+/* ===============================
+            CONTACTE
+===============================             */
+
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.calendar span {
+  font-weight: bold;
+}
+
+.form-container {
+  display: flex;
+  width: 35%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+
+form h3 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  height: 3rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #ecf0f1;
+}
+
+textarea {
+  height: 10rem;
+  border: 1px solid #ecf0f1;
+  border-radius: 12px;
+}
+
+button {
+  padding: 1rem;
+  color: #ecf0f1;
+  background-color: #d35400;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-line {
+  height: 5px;
+  background-color: #d35400;
+  width: 72%;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  color: #ecf0f1;
+  padding: 1em;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2em;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.icon {
+  font-size: 2em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: #ecf0f1;
+}
+
+.line {
+  height: 1px;
+  width: 95%;
+  background-color: #ecf0f1;
+}
+
+.scale {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scale:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .menu-container {
+    padding: 2rem;
+    flex: 1 1 auto;
+    gap: 2em;
+  }
+
+  .carte-container {
+    width: 100%;
+  }
+
+  .item1 {
+    flex: 1 1 auto;
+  }
+  .item2 {
+    flex: 1 1 auto;
+  }
+
+  .item3 {
+    flex: 1 1 100%;
+  }
+
+  .apropos-card-container {
+    flex-wrap: wrap;
+  }
+  .calendar {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container {
+    display: flex;
+    width: 70%;
+  }
+  .contact-container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+  }
+}
+
+@media (max-width: 576px) {
+  nav ul {
+    display: none;
+  }
+
+  nav .fa-bars {
+    display: block;
+    color: #ecf0f1;
+    font-size: 2em;
+  }
+
+  .item1,
+  .item2,
+  .item3 {
+    flex: 1 1 100%;
+  }
+
+  .hero-section {
+    font-size: 14px;
+  }
+
+  .section-apropos {
+    padding: 0em;
+  }
+
+  .story-container,
+  .team-container {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .team-container {
+    align-items: center;
+  }
+
+  .form-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 2em;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
